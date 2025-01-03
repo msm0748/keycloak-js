@@ -6,8 +6,8 @@ export const keycloak = new Keycloak({
   clientId: 'testApp',
 });
 
-export async function initKeycloak() {
+export const initKeycloak = async () => {
   await keycloak.init({
     onLoad: 'check-sso',
   });
-}
+};
